@@ -1,0 +1,42 @@
+{
+    "version": "2022.07.25",
+    "description": "C++ Library Manager for Windows, Linux, and MacOS.",
+    "homepage": "http://aka.ms/vcpkg",
+    "license": "MIT",
+    "notes": [
+        "vcpkg is installed with telemetry disabled flag (-disableMetrics) for privacy sake.",
+        "In order to use vcpkg with Visual Studio, run the following command (may require administrator elevation):",
+        "`vcpkg integrate install`",
+        "The best way to use installed libraries with cmake is via the toolchain file scripts\\buildsystems\\vcpkg.cmake.",
+        "To use this file, you simply need to add it onto your CMake command line as:",
+        "`-DCMAKE_TOOLCHAIN_FILE=D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake`",
+        "Packages will be installed on $env:USERPROFILE\\.vcpkg\\."
+    ],
+    "url": "https://github.com/microsoft/vcpkg/archive/2022.07.25.zip",
+    "hash": "d2bc4a233c0cebceb7491043b46e8bcf147227de1924cc76c182eef4ea17292a",
+    "post_install": [
+        "if (-not (Test-Path \"$env:USERPROFILE\\.vcpkg\")) {",
+        "   New-Item \"$env:USERPROFILE\\.vcpkg\" -ItemType Directory",
+        "}"
+    ],
+    "extract_dir": "vcpkg-2022.07.25",
+    "installer": {
+        "file": "bootstrap-vcpkg.bat",
+        "args": "-disableMetrics",
+        "keep": true
+    },
+    "bin": "vcpkg.exe",
+    "env_set": {
+        "VCPKG_DOWNLOADS": "$env:USERPROFILE\\.vcpkg",
+        "VCPKG_ROOT": "$env:USERPROFILE\\.vcpkg",
+        "VCPKG_FEATURE_FLAGS": "manifests"
+    },
+    "checkver": {
+        "github": "https://github.com/microsoft/vcpkg",
+        "regex": "tree/([\\d.-]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/microsoft/vcpkg/archive/$version.zip",
+        "extract_dir": "vcpkg-$version"
+    }
+}

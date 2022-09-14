@@ -1,5 +1,5 @@
 {
-    "version": "2022.07.25",
+    "version": "2022.08.15",
     "description": "C++ Library Manager for Windows, Linux, and MacOS.",
     "homepage": "http://aka.ms/vcpkg",
     "license": "MIT",
@@ -12,14 +12,14 @@
         "`-DCMAKE_TOOLCHAIN_FILE=D:\\src\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake`",
         "Packages will be installed on $env:USERPROFILE\\.vcpkg\\."
     ],
-    "url": "https://github.com/microsoft/vcpkg/archive/2022.07.25.zip",
-    "hash": "d2bc4a233c0cebceb7491043b46e8bcf147227de1924cc76c182eef4ea17292a",
+    "url": "https://github.com/microsoft/vcpkg/archive/2022.08.15.zip",
+    "hash": "cdc4f501413c51dd7fbc21969eaa3355393c3a0d4e2b861f1bbef95416f3465c",
     "post_install": [
         "if (-not (Test-Path \"$env:USERPROFILE\\.vcpkg\")) {",
         "   New-Item \"$env:USERPROFILE\\.vcpkg\" -ItemType Directory",
         "}"
     ],
-    "extract_dir": "vcpkg-2022.07.25",
+    "extract_dir": "vcpkg-2022.08.15",
     "installer": {
         "file": "bootstrap-vcpkg.bat",
         "args": "-disableMetrics",

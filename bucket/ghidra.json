@@ -1,5 +1,5 @@
 {
-    "version": "10.1.5-20220726",
+    "version": "10.2.2",
     "description": "Software reverse engineering (SRE) framework",
     "homepage": "https://ghidra-sre.org",
     "license": "Apache-2.0",
@@ -9,9 +9,9 @@
             "java/openjdk"
         ]
     },
-    "url": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.1.5_build/ghidra_10.1.5_PUBLIC_20220726.zip",
-    "hash": "17db4ba7d411d11b00d1638f163ab5d61ef38712cd68e462eb8c855ec5cfb5ed",
-    "extract_dir": "ghidra_10.1.5_PUBLIC_20220726",
+    "url": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_10.2.2_build/ghidra_10.2.2_PUBLIC_$build.zip",
+    "hash": "feb8a795696b406ad075e2c554c80c7ee7dd55f0952458f694ea1a918aa20ee3",
+    "extract_dir": "ghidra_10.2.2_PUBLIC",
     "bin": [
         "ghidraRun.bat",
         [
@@ -28,18 +28,19 @@
         ]
     ],
     "persist": [
-        "Ghidra\\Extensions",
-        "Ghidra\\patch"
+        "Ghidra/Extensions",
+        "Ghidra/patch",
+        "Ghidra/Configurations"
     ],
     "checkver": {
         "url": "https://github.com/NationalSecurityAgency/ghidra/releases",
-        "regex": "ghidra_(?<version>[\\d.]+)_PUBLIC_(?<build>[\\d]+).zip",
-        "replace": "${version}-${build}"
+        "regex": "Ghidra (?<version>[\\d.]+)",
+        "replace": "${version}"
     },
     "autoupdate": {
         "url": "https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_$version_build/ghidra_$version_PUBLIC_$build.zip",
         "hash": {
-            "url": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/$version",
+            "url": "https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_$version_build",
             "regex": "<code>$sha256</code>"
         },
         "extract_dir": "ghidra_$version_PUBLIC"

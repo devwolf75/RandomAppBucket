@@ -1,5 +1,5 @@
 {
-    "version": "105.0.5195.54-r1027018",
+    "version": "107.0.5304.88-r1047731",
     "description": "Stable Chromium builds for Windows 64-bit, nothing fancy.",
     "homepage": "https://github.com/Hibbiki/chromium-win64",
     "license": {
@@ -8,9 +8,9 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Hibbiki/chromium-win64/releases/download/v105.0.5195.54-r1027018/chrome.nosync.7z",
-            "hash": "09214c96b424a9dd9f9e73831d456b495e2e75ae0433d7335a15c1811cd0f326",
-            "extract_dir": "chrome.nosync.105.0.5195.54-r1027018"
+            "url": "https://github.com/Hibbiki/chromium-win64/releases/download/v107.0.5304.88-r1047731/chrome.nosync.7z",
+            "hash": "c035f7fa6fc9cf6a64d841f4bb845ca8cddeee74d6cca534bf6326d70d6b7144",
+            "extract_dir": "chrome.nosync.107.0.5304.88-r1047731"
         }
     },
     "bin": "Chrome-bin\\chrome.exe",

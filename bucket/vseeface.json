@@ -9,11 +9,11 @@
     "bin": "VSeeFace.exe",
     "checkver": {
         "url": "https://github.com/emilianavt/VSeeFaceReleases/releases",
-        "regex": "VSeeFace (?<version>[\\d.]+)(?<letter>[\\w.]+)",
+        "regex": "VSeeFace v(?<version>[\\d.]+)",
         "replace": "${version}"
     },
     "autoupdate": {
-        "url": "https://github.com/emilianavt/VSeeFaceReleases/releases/download/$version/VSeeFace-v$version$letter.zip",
-        "extract_dir": "VSeeFace_$version"
+        "url": "https://github.com/emilianavt/VSeeFaceReleases/releases/download/$version/VSeeFace-v$version(.*?).zip",
+        "extract_dir": "ghidra_$version_PUBLIC"
     }
 }

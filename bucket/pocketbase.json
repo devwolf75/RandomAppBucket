@@ -4,7 +4,7 @@
     "homepage": "https://pocketbase.io/",
     "license": "MIT",
     "url": "https://github.com/pocketbase/pocketbase/releases/download/v0.18.8/pocketbase_0.18.8_windows_amd64.zip",
-    "hash": "56e1ee643880c9159212b94a216e01207aa5c3534a8ce62bb2459413c86e2ff0",
+    "hash": "aee23944f3a2b225d5830cb6c750363486cc7886d5b0e6869ec080e8e0ebc183",
     "bin": "pocketbase.exe",
     "persist": "pb_data",
     "checkver": {

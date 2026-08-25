@@ -3,7 +3,7 @@
     "description": "Graphical Git client (fork personal de Gittyup para Windows)",
     "homepage": "https://github.com/devwolf75/Gittyup-Windows",
     "license": "MIT",
-    "url": "https://api.github.com/repos/devwolf75/Gittyup-Windows/releases/download/development/Gittyup-win64-2.0.0.exe#/dl.7z",
+    "url": "https://github.com/devwolf75/Gittyup-Windows/releases/download/development/Gittyup-win64-2.0.0.exe#/dl.7z",
     "hash": "42d148d16772292df547742a390cc094a09f04611e703624977e3236d85ac386",
     "bin": "bin\\gittyup.exe",
     "shortcuts": [
@@ -17,6 +17,6 @@
         "regex": "Gittyup-win64-(?<version>[\\d\\.]+)\\.exe"
     },
     "autoupdate": {
-        "url": "https://api.github.com/repos/devwolf75/Gittyup-Windows/releases/download/development/Gittyup-win64-$version.exe#/dl.7z"
+        "url": "https://github.com/devwolf75/Gittyup-Windows/releases/download/development/Gittyup-win64-$version.exe#/dl.7z"
     }
 }

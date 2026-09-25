@@ -1,0 +1,22 @@
+{
+    "version": "1.3.1",
+    "description": "LuaTools is a tool to manage your Steam game library, apply .lua/.manifest/.zip fixes and install Steam plugins.",
+    "homepage": "https://lua.tools/",
+    "license": "MIT",
+    "url": "https://github.com/madoiscool/LuaTools/releases/download/v1.3.1/LuaTools-win-Portable.zip",
+    "hash": "38e6f08129e76dfeb86ccd78f22b8453be117ec28c695a8c59411c33550d3e83",
+    "bin": "LuaTools.exe",
+    "shortcuts": [
+        [
+            "LuaTools.exe",
+            "LuaTools"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/madoiscool/LuaTools/releases/latest",
+        "regex": "\"tag_name\":\\s*\"v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/madoiscool/LuaTools/releases/download/v$version/LuaTools-win-Portable.zip"
+    }
+}
